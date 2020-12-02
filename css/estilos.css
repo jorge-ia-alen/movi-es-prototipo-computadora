@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Geostar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: rgb(49, 47, 47);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+img {
+    width: 100%;
+    cursor: pointer;
+}
+
+p {
+    cursor: pointer;
+}
+
+/*Contenedor y main*/
+
+.header-nav--container {
+    display: grid;
+    grid-template-columns: 250px 3fr 250px;
+    grid-template-areas: "logo buscador user";
+    padding-bottom: 10px;
+    box-shadow: 2px 10px 18px 10px rgba(0, 0, 0, 0.05);
+}
+
+/*logo de las palomitas*/
+
+.palomitas-logo {
+    grid-area: logo;
+    display: inline-flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.palomitas-logo h1 {
+    display: flex;
+    line-height: 1.7rem;
+    font-size: 4rem;
+    align-self: center;
+    font-family: 'Geostar', cursive;
+    cursor: pointer;
+}
+
+.palomitas-logo img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+/*buscador de la web*/
+
+.buscador--container {
+    grid-area: buscador;
+    justify-self: center;
+    align-self: center;
+}
+
+.buscador {
+    width:700px;
+    height: 30px;
+    border: solid rgb(165, 165, 165) 1px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.buscador:focus {
+    border: rgb(105, 103, 103) 1px solid;
+    border-radius: 10px;
+    outline: none;
+}
+
+/*User container and profile*/
+
+.user-icon--container {
+    grid-area: user;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.icon-contain--title {
+    display: inline-block;
+    color: rgb(49, 47, 47);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.icon-contain--img .span-img {
+    display: flex;
+}
+
+.span-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/*Parte del contenedor de todos los elementos del main incluidos el menu left y el container de las peliculas*/
+
+.movies-and-menu-container--main {
+    display: grid;
+    grid-template-columns: 150px 3fr;
+}
+
+/*Menu del costado donde ir a todas las secciones*/
+
+.left-menu {
+    display: inline-block;
+    text-align: center;
+    background-color: #fd6766;
+    padding-top: 50px;
+}
+
+.left-menu img {
+    width: 40px;
+    height: 40px;
+}
+
+.menu-left--item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu-left--item  p {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+/*ya la seccion de peliculas con los titulos y las descripciones*/
+
+/* .show-movies--container {
+   Contenedor de todas las secciones de abajo
+}
+ */
+.headers {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    line-height: 2rem;
+    font-size: 2rem;
+}
+
+.portadas-de-peliculas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    padding-top: 15px;
+    margin-left: 42px;
+}
+
+/*cajas contenedoras de las peliculas*/
+
+.movie-box {
+    width: 95%;
+    height: 220px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/*Contenedores de los textos y descripciones de la pelicula*/
+
+.for-overlay-color-and-text--container {
+    position: absolute;
+    top: 92px;
+    width: 100%;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    background-color: #fd6666a2;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.for-overlay-color-and-text--container h2, p {
+    margin-left: 10px;
+    margin-right: 3px;
+    color: white;
+    line-height: 2rem;
+}
+
+.for-overlay-color-and-text--container h2 {
+    /* line-height: 1.9rem; */
+    font-size: 2rem;
+}
+
+.for-overlay-color-and-text--container p {
+    font-size: 1.4rem;
+}
